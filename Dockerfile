@@ -77,15 +77,15 @@ WORKDIR /home/arch
 RUN git clone https://aur.archlinux.org/android-sdk-platform-tools.git \
     && cd android-sdk-platform-tools \
     && makepkg -si --nocheck --force --noconfirm \
-    ; source /etc/profile.d/android-sdk-platform-tools.sh || exit 1
+    ; source /etc/profile.d/android-sdk-platform-tools.sh
 
 RUN git clone https://aur.archlinux.org/binfmt-qemu-static.git \
     && cd binfmt-qemu-static \
-    && makepkg -si --nocheck --force --noconfirm || exit 1
+    && makepkg -si --nocheck --force --noconfirm
 
 RUN git clone https://aur.archlinux.org/qemu-user-static-bin.git \
     && cd qemu-user-static-bin \
-    && makepkg -si --nocheck --force --noconfirm || exit 1
+    && makepkg -si --nocheck --force --noconfirm
 
 
 WORKDIR /home/arch
